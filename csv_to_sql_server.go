@@ -175,7 +175,7 @@ func iniciaLog(insertions, connections *int) {
 
 func parseColunas(columns []string, query *string) {
 
-	*query = "INSERT INTO "+TABELA+" ("
+	*query = "INSERT INTO ["+DATABASE+"].dbo.["+TABELA+"] ("
 	placeholder := "VALUES ("
 	for i, c := range columns {
 		if i == 0 {
